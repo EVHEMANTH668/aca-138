@@ -47,3 +47,17 @@ h1{
     background-color: white;
     margin-left: 25%;
 }
+
+#footer{
+    background-color: red;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+#game{
+    margin-bottom: 50px;
+    display: block;
+}
