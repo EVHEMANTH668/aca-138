@@ -1,6 +1,7 @@
 body{
     text-align: center;
     background-color: royalblue;
+    align-items: center;
 }
 
 canvas{
@@ -60,4 +61,11 @@ h1{
 #game{
     margin-bottom: 50px;
     display: block;
+}
+
+.webcam{
+    width: 800px;
+    height: 400px;
+    display: block;
+    margin-left: 20%;
 }
