@@ -27,6 +27,7 @@ function setup(){
   video.size(800,400);
   video.parent("cam")
   poseNet = ml5.poseNet(video,modelLoaded);
+  poseNet.on("pose",gotPoses);
 }
 
 
@@ -170,4 +171,16 @@ function paddleInCanvas(){
 
 function modelLoaded(){
   console.log("! model Loaded")
+}
+
+function gotPoses(Results){
+  if(Results.length > 0){
+    console.log(Results);
+    rightWristX = Results[0].pose.rightWrist.x;
+    rightWristY = Results[0].pose.rightWrist.y;
+    leftWristX = Results[0].pose.leftWrist.x;
+    leftWristY = Results[0].pose.leftWrist.y;
+    fill("red")
+    circle(leftWristX,leftWristY,10);
+  }
 }
